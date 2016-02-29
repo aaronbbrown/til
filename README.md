@@ -26,3 +26,12 @@ RUN rm /usr/sbin/policy-rc.d; \
 ```
 docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm
 ```
+
+Linux
+=====
+
+* Use prlimit to change ulimits on the fly
+
+```
+prlimit --pid $(pidof mecached) --nofile=8192:8192
+```
