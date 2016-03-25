@@ -35,3 +35,12 @@ Linux
 ```
 prlimit --pid $(pidof mecached) --nofile=8192:8192
 ```
+
+Git
+===
+
+* Delete all local branches which have been merged into master
+
+```
+git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d
+```
