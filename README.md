@@ -44,3 +44,19 @@ Git
 ```
 git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d
 ```
+
+Command line
+===============
+
+* urldecode single url from commandline
+
+```
+echo $URL | python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"
+
+```
+
+* urldecode list of urls from the commandline
+
+```
+cat urls | python -c "import sys, urllib as ul; [sys.stdout.write(ul.quote_plus(l)) for l in sys.stdin]"
+```
