@@ -45,6 +45,11 @@ Git
 git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d
 ```
 
+* Sign all commits
+```
+git config --global commit.gpgsign true
+```
+
 Command line
 ===============
 
