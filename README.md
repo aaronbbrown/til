@@ -65,3 +65,12 @@ echo $URL | python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[
 ```
 cat urls | python -c "import sys, urllib as ul; [sys.stdout.write(ul.quote_plus(l)) for l in sys.stdin]"
 ```
+
+Shell
+=====
+
+* Log everything in a script to both console and syslog
+
+```
+exec 1> >(tee -ai /dev/console | logger -s -t $(basename $0)) 2>&1
+```
