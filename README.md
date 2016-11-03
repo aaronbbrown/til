@@ -27,6 +27,13 @@ RUN rm /usr/sbin/policy-rc.d; \
 docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm
 ```
 
+* Get a shell session on the Docker For Mac VM: (Ctrl-A, Ctrl-\, "y" to quit)
+
+```
+screen ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/tty
+```
+
+
 Linux
 =====
 
