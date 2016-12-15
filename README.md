@@ -81,3 +81,13 @@ Shell
 ```
 exec 1> >(tee -ai /dev/console | logger -s -t $(basename $0)) 2>&1
 ```
+
+
+Python
+======
+
+* Verify syntax by compiling without executing (similar to `ruby -c`
+
+```
+python -m py_compile file.py
+```
