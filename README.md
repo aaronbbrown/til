@@ -91,3 +91,9 @@ Python
 ```
 python -m py_compile file.py
 ```
+
+Go
+==
+
+* Send SIGQUIT & get stack trace w/ `Ctrl-\`
+
